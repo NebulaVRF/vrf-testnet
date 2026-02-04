@@ -8,14 +8,14 @@ Thanks for your interest in contributing to NebulaVRF.
 2. Clone the repository and build the contract:
 
 ```
-cd contracts/nebula-vrf
+cd vrf-testnet/contracts/nebula-vrf
 stellar contract build
 ```
 
 ### Tests
 
 ```
-cd contracts/nebula-vrf
+cd vrf-testnet/contracts/nebula-vrf
 cargo test
 ```
 

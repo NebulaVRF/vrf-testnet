@@ -60,14 +60,14 @@ m = sha256(seed || salt)
 From the repo root:
 
 ```bash
-cd contracts/nebula-vrf
+cd vrf-testnet/contracts/nebula-vrf
 stellar contract build
 ```
 
 Run tests:
 
 ```bash
-cd contracts/nebula-vrf
+cd vrf-testnet/contracts/nebula-vrf
 cargo test
 ```
 
