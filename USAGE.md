@@ -47,6 +47,10 @@ If compressed values are used, verification will fail.
 
 ## Payload Generation (Testnet)
 
+The helpers in `vrf-core` are **demo utilities** meant to get you started on testnet.
+They are not a production randomness strategy. For real integrations, you should
+create **your own seed/salt generation and signing flow** tailored to your app.
+
 You can generate correct payloads using the `vrf-core` repo
 ([NebulaVRF/vrf-core](https://github.com/NebulaVRF/vrf-core)):
 
@@ -62,20 +66,33 @@ This produces hex and base64 outputs for:
 - `pubkey` (G1, 96 bytes)
 - `signature` (G2, 192 bytes)
 
-### Custom Seed/Salt Logic
+### Build Your Own Seed/Salt Logic
 
-You can replace the seed/salt logic with your own method:
+You should replace the demo seed/salt logic with your own method:
 - OS randomness (`OsRng`)
 - deterministic seed based on app state
 - user-provided secrets
 
-Just ensure you compute:
+At minimum, ensure you:
+1. Generate `seed` and `salt` with your own logic.
+2. Compute the commitment.
+3. Sign with the correct DST and uncompressed formats.
+
+Commitment formula:
 
 ```
 commitment = sha256(seed || salt)
 ```
 
-and sign that commitment using the correct DST.
+Then sign that commitment using the correct DST.
+
+### Recommended Custom Flow (Summary)
+
+1. **Seed**: derive from your app logic + secure entropy.
+2. **Salt**: additional nonce per request.
+3. **Commit**: store `sha256(seed || salt)` on-chain.
+4. **Reveal**: publish `seed`, `salt`, and signature.
+5. **Derive**: use `derive_random` with app‑specific context.
 
 ---
 
