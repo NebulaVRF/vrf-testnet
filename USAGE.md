@@ -144,7 +144,7 @@ The local payload API lives in the `vrf-core` repo
 
 ```bash
 cd vrf-core
-cargo run --bin nebula_vrf_api
+cargo run --bin nebula_vrf_api --features api
 ```
 
 Then:
