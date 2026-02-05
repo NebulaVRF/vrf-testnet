@@ -6,7 +6,7 @@ This guide shows how to use the NebulaVRF Soroban contract on testnet, including
 
 ## Contract Information
 
-- **Contract ID**: `CDNMUKSXRCJNHHKDEND7YKOT62ZEPTEIWL3GVJ7ILOEXUVZYR34FBQCC`
+- **Contract ID**: `CBLC5COYONIRCPWWCRNE6S2EOYJ7IQOWI7RUDG5ZVPHCLZW2KXFFCK2Q`
 - **Network**: Soroban Testnet
 - **Status**: Deployed
 

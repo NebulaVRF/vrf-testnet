@@ -78,7 +78,7 @@ cargo test
 See `DEPLOYMENT.md` for build and deploy instructions (testnet).
 
 Current deployed contract:
-- **Contract ID**: `CDNMUKSXRCJNHHKDEND7YKOT62ZEPTEIWL3GVJ7ILOEXUVZYR34FBQCC`
+- **Contract ID**: `CBLC5COYONIRCPWWCRNE6S2EOYJ7IQOWI7RUDG5ZVPHCLZW2KXFFCK2Q`
 - **Network**: Soroban Testnet
 
 ---
